@@ -49,7 +49,7 @@ combinedTable <- rbind(debugDataL,debugDataM)
 #barplot(rownames(combinedTable), columns(combinedTable), main="Debug commands used per person", xlab="Number of debugs", col=c("red","darkblue"), beside=TRUE)
 
 #Separated bar graphs, because this is getting ridiculous
-barplot(dataMost$Debug.COUNT..., dataMost$Hours.COUNT, main="Debug commands used per person", xlab="Number of debugs", col=c("red","darkblue"), legend=dataMost$userId, beside=TRUE)
+barplot(dataMost$Debug.COUNT..., dataMost$Hours.COUNT, main="Debug commands used per person", ylab="Number of debugs", xlab="hours",col=c("red","darkblue"), legend=dataMost$userId, beside=TRUE)
 barplot(dataLeast$Debug.COUNT..., dataLeast$Hours.COUNT, main="Debug commands used per person", ylab="Number of debugs", xlab="hours", col=c("red", "darkblue"), legend=dataLeast$userId)
 plot(debugDataM)
 plot(debugDataL)
