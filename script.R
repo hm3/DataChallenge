@@ -38,3 +38,18 @@ hist(dataLeast$Debug.Total,
 #the second row is the least active developers
 x <- data.frame("Debug" = median(dataMost$Debug.Total), "Copy" = median(dataMost$Copy.Total), "Paste" = median(dataMost$Paste.Total), "Build" = median(dataMost$Build.Total))
 x <- rbind(x, data.frame("Debug" = median(dataLeast$Debug.Total), "Copy" = median(dataLeast$Copy.Total), "Paste"=median(dataLeast$Paste.Total), "Build"= median(dataLeast$Build.Total)))
+
+#Joe's work
+debugDataM <- table(dataMost$Hours.COUNT, dataMost$Debug.COUNT...)
+debugDataL <- table(dataLeast$Hours.COUNT, dataLeast$Debug.COUNT...)
+
+#I have succesfully combined data, but it continues to refuse to be displayed
+#combinedTable <- merge(debugDataL,debugDataM, by="hours")
+combinedTable <- rbind(debugDataL,debugDataM)
+#barplot(rownames(combinedTable), columns(combinedTable), main="Debug commands used per person", xlab="Number of debugs", col=c("red","darkblue"), beside=TRUE)
+
+#Separated bar graphs, because this is getting ridiculous
+barplot(dataMost$Debug.COUNT..., dataMost$Hours.COUNT, main="Debug commands used per person", xlab="Number of debugs", col=c("red","darkblue"), legend=dataMost$userId, beside=TRUE)
+barplot(dataLeast$Debug.COUNT..., dataLeast$Hours.COUNT, main="Debug commands used per person", ylab="Number of debugs", xlab="hours", col=c("red", "darkblue"), legend=dataLeast$userId)
+plot(debugDataM)
+plot(debugDataL)
