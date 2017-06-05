@@ -16,6 +16,20 @@ hist(dataMost$Copy.COUNT,
 hist(dataLeast$Copy.COUNT, 
      main = "Total Copy Usage in Least Active Developers",
      xlab = "Total Copy Use")
+#Histogram for count of Paste events
+hist(dataMost$Paste.COUNT, 
+     main = "Total Paste Usage in Most Active Developers",
+     xlab = "Total Paste Use")
+hist(dataLeast$Paste.COUNT,
+     main = "Total Paste Usage in Least Active Developers",
+     xlab = "Total Paste Use")
+#Histogram for count of Build events
+hist(dataMost$Build.COUNT,
+     main = "Total Build Usage in Most Active Developers",
+     xlab = "Total Build Use")
+hist(dataLeast$Build.COUNT,
+     main = "Total Build Usage in Least Active Developers",
+     xlab = "Total Build Use")
 #Debug.Total = Debug/Total, proportion of event over total events
 #Histogram for proportion of Debug events over total events 
 #in most active programmers
@@ -38,6 +52,24 @@ hist(dataLeast$Copy.Total,
      main = "Copying as a Proportion of All Events
      in Least Active Developers",
      xlab = "Copying Event Total/All Events")
+#Histogram for proportion of Paste events over total events
+hist(dataMost$Paste.Total,
+     main = "Pasting as a Proportion of All Events
+     in Most Active Developers",
+     xlab = "Pasting Event Total/All Events")
+hist(dataLeast$Paste.Total,
+     main = "Pasting as a Proportion of All Events
+     in Least Active Developers",
+     xlab = "Paste Event Total/All Events")
+#Histogram for proportion of Build events over total events
+hist(dataMost$Build.Total,
+     main = "Building as a Proportion of All Events
+     in Most Active Developers",
+     xlab = "Build Event Total/All Events")
+hist(dataLeast$Build.Total,
+     main = "Build Events as a Proportion of all Events
+     in Least Active Developers",
+     xlab = "Build Event Total/All Events")
 #Make a table with only the median values for the proportions 
 #of events;
 #the first row is the most active developers, 
