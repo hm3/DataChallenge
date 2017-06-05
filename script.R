@@ -76,7 +76,22 @@ hist(dataLeast$Build.Total,
 #the second row is the least active developers
 x <- data.frame("Debug" = median(dataMost$Debug.Total), "Copy" = median(dataMost$Copy.Total), "Paste" = median(dataMost$Paste.Total), "Build" = median(dataMost$Build.Total))
 x <- rbind(x, data.frame("Debug" = median(dataLeast$Debug.Total), "Copy" = median(dataLeast$Copy.Total), "Paste"=median(dataLeast$Paste.Total), "Build"= median(dataLeast$Build.Total)))
-
+#Bar plot for median proportions of Debugging/All Events
+barplot(x$Debug,
+        main = "Median Proportion of Debugging over All Events",
+        xlab = "Most Active Developers   Least Active Developers")
+#Bar plot for median proportions of Copying/All Events
+barplot(x$Copy,
+        main = "Median Proportion of Copying over All Events",
+        xlab = "Most Active Developers   Least Active Developers")
+#Bar plot for median proportions of Pasting/All Events
+barplot(x$Paste,
+        main = "Median Proportion of Pasting over All Events",
+        xlab = "Most Active Developers   Least Active Developers")
+#Bar plot for median proportions of Building/All Events
+barplot(x$Build,
+        main = "Median Proportion of Building over All Events",
+        xlab = "Most Active Developers   Least Active Developers")
 #Joe's work
 debugDataM <- table(dataMost$Hours.COUNT, dataMost$Debug.COUNT...)
 debugDataL <- table(dataLeast$Hours.COUNT, dataLeast$Debug.COUNT...)
