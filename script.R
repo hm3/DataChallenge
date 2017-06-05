@@ -55,6 +55,14 @@ combinedTable <- rbind(debugDataL,debugDataM)
 #barplot(rownames(combinedTable), columns(combinedTable), main="Debug commands used per person", xlab="Number of debugs", col=c("red","darkblue"), beside=TRUE)
 
 #Separated bar graphs, because this is getting ridiculous
+barplot(dataMost$Debug.COUNT..., dataMost$Hours.COUNT, main="Debug commands used per person", ylab="Number of debug commands", xlab="hours",col=c("red","darkblue"), legend=dataMost$userId, beside=TRUE)
+barplot(dataLeast$Debug.COUNT..., dataLeast$Hours.COUNT, main="Debug commands used per person", ylab="Number of debug commands", xlab="hours", col=c("red", "darkblue"), legend=dataLeast$userId)
+
+#Bar graphs for the other commands, since it might be helpful
+barplot(dataMost$Build.COUNT, dataMost$Hours.COUNT, main="Build commands used per person", ylab="Number of builds", xlab="hours",col=c("red","darkblue"), legend=dataMost$userId, beside=TRUE)
+barplot(dataLeast$Build.COUNT, dataLeast$Hours.COUNT, main="Build commands used per person", ylab="Number of builds", xlab="hours", col=c("red", "darkblue"), legend=dataLeast$userId)
+barplot(dataMost$Copy.COUNT, dataMost$Hours.COUNT, main="Copy commands used per person", ylab="Number of copy commands", xlab="hours",col=c("red","darkblue"), legend=dataMost$userId, beside=TRUE)
+barplot(dataLeast$Copy.COUNT, dataLeast$Hours.COUNT, main="Copy commands used per person", ylab="Number of copy commands", xlab="hours", col=c("red", "darkblue"), legend=dataLeast$userId)
 barplot(dataMost$Paste.COUNT, dataMost$Hours.COUNT, main="Paste commands used per person", ylab="Number of paste commands", xlab="hours",col=c("red","darkblue"), legend=dataMost$userId, beside=TRUE)
 barplot(dataLeast$Paste.COUNT, dataLeast$Hours.COUNT, main="Paste commands used per person", ylab="Number of paste commands", xlab="hours", col=c("red", "darkblue"), legend=dataLeast$userId)
 plot(debugDataM)
