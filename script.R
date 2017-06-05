@@ -9,16 +9,13 @@ hist(dataMost$Debug.COUNT...,
 hist(dataLeast$Debug.COUNT...,
      main = "Debug Usage in Least Active Developers",
      xlab = "Total Debugger Use")
-#Correlation between copying and pasting: .957
-cor(dataMost$Copy.COUNT, dataMost$Paste.COUNT)
-#Correlation between copying and pasting: .985
-cor(dataLeast$Copy.COUNT, dataLeast$Paste.COUNT)
-#Correlation between using the debugger and 
-#pasting code: -.411
-cor(dataMost$Debug.COUNT...,dataMost$Paste.COUNT)
-#Correlation between using the debugger and
-#pasting code: .804
-cor(dataLeast$Debug.COUNT...,dataLeast$Paste.COUNT)
+#Histogram for count of Copy events
+hist(dataMost$Copy.COUNT,
+     main = "Copy Usage in Most Active Developers",
+     xlab = "Total Copy Use")
+hist(dataLeast$Copy.COUNT, 
+     main = "Total Copy Usage in Least Active Developers",
+     xlab = "Total Copy Use")
 #Debug.Total = Debug/Total, proportion of event over total events
 #Histogram for proportion of Debug events over total events 
 #in most active programmers
@@ -32,6 +29,15 @@ hist(dataLeast$Debug.Total,
      main = "Debugging as a Proportion of All Events 
      in Least Active Developers",
      xlab = "Debugging Event Total/Total All Events")
+#Histogram for proportion of Copy events over total events
+hist(dataMost$Copy.Total,
+     main = "Copying as a Proportion of All Events
+     in Most Active Developers",
+     xlab = "Copying Event Total/All Events")
+hist(dataLeast$Copy.Total,
+     main = "Copying as a Proportion of All Events
+     in Least Active Developers",
+     xlab = "Copying Event Total/All Events")
 #Make a table with only the median values for the proportions 
 #of events;
 #the first row is the most active developers, 
